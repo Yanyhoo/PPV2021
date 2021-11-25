@@ -1,0 +1,11 @@
+.ppv-logo {
+  width: 200px;
+}
+.ppv-section {
+  padding: 2rem;
+  border-bottom: 2px solid red;
+}
+.ppv-meteo-bar .ppv-data {
+  border: 1px solid green;
+  display: inline-block;
+}
