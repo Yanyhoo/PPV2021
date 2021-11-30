@@ -12,17 +12,19 @@ function meteoUpdate() {
 			tlak = Math.round(numeric(weather[16])).toString();
 			rQNH = Math.round(numeric(weather[17])).toString();
 
+		$('.data-date').html(weather[0]);
 		$('.data-wind-cur').html(vSmer + '/' + vMin);
-		$('.data-wind-peak').html(vMin);
 		$('.data-wind-max').html(vMax);
-		$('.data-wind-smer').html(vSmer);
 		$('.data-QNH').html(tlak);
 		$('.data-rQNH').html(rQNH);
 		$('.data-temp').html(numeric(weather[11]));
-		$('.data-date').html(weather[0]);
-		$('.data-time').html(weather[1]);
-		$('.data-SR').html(weather[18]);
-		$('.data-SS').html(weather[19]);
+		$('.data-SRS').html(weather[18] + ' - ' + weather[19]);
+
+		// $('.data-wind-peak').html(vMin);
+		// $('.data-wind-smer').html(vSmer);
+		// $('.data-time').html(weather[1]);
+		// $('.data-SR').html(weather[18]);
+		// $('.data-SS').html(weather[19]);
 		});
 
 	//$('#kamera-1').attr('src','http://www.aeroklub.cz/wpscripts/camera_1.php?' + Math.random());
