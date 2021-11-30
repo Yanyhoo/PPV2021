@@ -9,3 +9,8 @@
   border: 1px solid green;
   display: inline-block;
 }
+
+.ppv-background{ 
+	background-image: url('img/PPV_Background.png');  
+	height: 55vh;
+}
