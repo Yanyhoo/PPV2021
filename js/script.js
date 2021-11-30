@@ -34,4 +34,4 @@ function numeric(data_string) {
 	return data_string.replace(/[a-z]+/ig, ''); 
 }
 
-console.log(data);
+console.log('script.js running');
