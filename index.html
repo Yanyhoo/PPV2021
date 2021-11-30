@@ -2,87 +2,109 @@
 <html lang="cs">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>PPV2022</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-  <!-- MDB -->
-  <link rel="stylesheet" href="css/mdb.min.css" />
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="css/style.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>PPV2022</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+	<!-- Google Fonts Roboto -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+	<!-- MDB -->
+	<link rel="stylesheet" href="css/mdb.min.css" />
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <div class="ppv-section">
-        <img src="img/LogoPPV.png" alt="PPV 2022 logo" class="ppv-logo" />
-    </div>
+	<div class="container ppv-section">
+		<img src="img/LogoPPV.png" alt="PPV 2022 logo" class="ppv-logo" />
+	</div>
 
-    <div class="ppv-section">
-      <!-- Počasí -->
-      <div class="ppv-meteo-bar">
-          <div class="gray">
-            <div class="ppv-data data-meteo"><span class="data-time">17:54</span>&nbsp;<span class="data-date">24.11.2021</span>
-            </div>
-          </div>
-          <div class="gray">
-            <div class="ppv-data data-wind-cur">127°/10</div>
-            <div class="ppv-data data-wind-max">13.1</div>
-          </div>
-          <div class="gray">
-            <div class="ppv-data data-QNH">1021</div>
-            <div class="ppv-data data-rQNH">1015</div>
-          </div>
-          <div class="gray">
-            <div class="ppv-data data-temp">3.3°</div>
-          </div>
-          <div class="gray">
-            <div class="ppv-data data-SR">6:23</div>
-            <div class="ppv-data data-SS">15:05</div>
-          </div>
-        </div>
-    </div>
+	<div class="container ppv-section">
+		<!-- Počasí -->
+		<table class="table-sm table-bordered jusify-content-center ppv-data data-meteo" < />
+		<thead>
+			<tr>
+				<th scope="col">Datum a čas (UTC)</th>
+				<th scope="col">Směr a síla větru</th>
+				<th scope="col">Minutová špička větru</th>
+				<th scope="col">QNH letiště</th>
+				<th scope="col">QNH regionu</th>
+				<th scope="col">Teplota vzduch<br> </th>
+				<th scope="col">Východ a západ (UTC)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="ppv-data data-date">24.11.2021 17:54</td>
+				<td class="ppv-data data-wind-cur">127°/10</td>
+				<td class="ppv-data data-wind-max">13.1</td>
+				<td class="ppv-data data-QNH">1021</td>
+				<td class="ppv-data data-rQNH">1015</td>
+				<td class="ppv-data data-temp">3.3°</td>
+				<td class="ppv-data data-SRSS">6:23 - 15:05</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	</div>
 
-    <div class="ppv-section">
- Kdy kde
-        <a href="/"><button>Registrace</button></a>
-    </div>
-    <div class="ppv-section">
-  Dokumenty
-    </div>
-    <div class="ppv-section ppv-section--aktuality">
-        <h3 class="ppv-section__title">Aktuality</h3>
-        <ul class="ppv-list">
-            <li class="ppv-list-item">
-                <h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus modi? Porro aliquam dolore aut soluta! </p>
-            </li>
-            <li class="ppv-list-item">
-                <h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus modi? Porro aliquam dolore aut soluta! </p>
-            </li>
-            <li class="ppv-list-item">
-              <h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus modi? Porro aliquam dolore aut soluta! </p>
-          </li>
-      </ul>
-    </div>
-    <div class="ppv-section">
-    Startovní listina
-    </div>
-    <div class="ppv-section">
-Web kamery
-    </div>
-    <div class="ppv-section">
-Kontakty
-    </div>
+	<div class="container ppv-section">
+		<!-- Background image -->
+		<div 
+			class="bg-image d-flex rounded justify-content-center align-items-center mb-5 text-white" 
+			style=" 
+				background-image: url('img/PPV_Background.png');  
+				height: 55vh;"
+		>
+			<div class="grid align-items-center">
+				<div class="g-col-6 g-col-md-4"><h1 class="mb-3 h2">Registrace je otevřena</h1></div>
+				<div class="g-col-6 g-col-md-4"><button type="button" class="btn btn-light" data-mdb-ripple-color="dark">Zaregistrujte se zde</button></div>
+				<div class="g-col-6 g-col-md-4"><p>
+					Plachtařský pohár Vysočiny se bude konat ve dnech 23.-31.7.2022 na letišti Havlíčkův Brod - LKHB
+				</p></div>
+			</div>		
+		</div>
+		<!-- Background image -->
+		
+	</div>
+	<div class="container ppv-section">
+		Dokumenty
+	</div>
+	<div class="container ppv-section ppv-section--aktuality">
+		<h3 class="ppv-section__title">Aktuality</h3>
+		<ul class="ppv-list">
+			<li class="ppv-list-item">
+				<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
+					modi? Porro aliquam dolore aut soluta! </p>
+			</li>
+			<li class="ppv-list-item">
+				<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
+					modi? Porro aliquam dolore aut soluta! </p>
+			</li>
+			<li class="ppv-list-item">
+				<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
+					modi? Porro aliquam dolore aut soluta! </p>
+			</li>
+		</ul>
+	</div>
+	<div class="container ppv-section">
+		Startovní listina
+	</div>
+	<div class="container ppv-section">
+		Web kamery
+	</div>
+	<div class="container ppv-section">
+		Kontakty
+	</div>
 
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<!-- Custom scripts -->
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
