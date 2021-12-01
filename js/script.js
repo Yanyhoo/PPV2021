@@ -2,7 +2,7 @@ var interval = window.setInterval('meteoUpdate()',60000);
 meteoUpdate();
 
 function meteoUpdate() {
-	$.get('http://www.aeroklub.cz/wpscripts/weather.php', function(data) {
+	$.get('weather.php', function(data) {
 		console.log(data);
 		var weather = data.split(';'),
 			vCur = numeric(weather[2]), 
