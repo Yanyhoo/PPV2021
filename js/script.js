@@ -2,7 +2,7 @@ var interval = window.setInterval('meteoUpdate()',60000);
 meteoUpdate();
 
 function meteoUpdate() {
-	$.get('weather.php', function(data) {
+	$.get('http://ppv2021.prokoho.cz/weather.php', function(data) {
 		console.log(data);
 		var weather = data.split(';'),
 			vCur = numeric(weather[2]), 
