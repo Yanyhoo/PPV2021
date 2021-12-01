@@ -13,4 +13,5 @@
 .ppv-background{ 
 	background-image: url('../img/PPV_Background.png');  
 	height: 55vh;
+	padding: 3rem;
 }
