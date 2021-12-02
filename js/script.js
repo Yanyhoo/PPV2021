@@ -12,7 +12,7 @@ function meteoUpdate() {
 			tlak = Math.round(numeric(weather[16])).toString();
 			rQNH = Math.round(numeric(weather[17])).toString();
 
-		$('.data-date').html(weather[0]);
+		$('.data-date').html(weather[0] + ' ' + weather[1]);
 		$('.data-wind-cur').html(vSmer + '/' + vMin);
 		$('.data-wind-max').html(vMax);
 		$('.data-QNH').html(tlak);
