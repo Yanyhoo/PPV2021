@@ -1,5 +1,9 @@
 /* SMALL SCREEN */
 
+body {
+	min-width: 300px;
+}
+
 
 /* 
 SMALL SCREEN - TABLE
@@ -45,8 +49,13 @@ and also iPads specifically.
 	/*
 	Label the data
 	*/
-	td:nth-of-type(1):before { content: "First Row"; }
-	td:nth-of-type(2):before { content: "Second Row"; }
+	td:nth-of-type(1):before { content: "Datum a čas"; }
+	td:nth-of-type(2):before { content: "Směr a síla větru"; }
+	td:nth-of-type(3):before { content: "Minutová špička větru"; }
+	td:nth-of-type(4):before { content: "QNH letiště"; }
+	td:nth-of-type(5):before { content: "QNH regionu"; }
+	td:nth-of-type(6):before { content: "Teplota vzduch"; }
+	td:nth-of-type(7):before { content: "Východ a západ (UTC)"; }
 }
 
 
