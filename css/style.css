@@ -3,6 +3,12 @@
 body {
 	min-width: 300px;
 }
+	#weather th,
+	#weather td {
+		text-align: left;
+		padding-right: 10px;
+		font-size: 80%;
+	}
 
 
 /* 
@@ -14,20 +20,18 @@ and also iPads specifically.
 @media only screen and (max-width: 760px) {
 
 	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
+	#weather table, #weather thead, #weather tbody, #weather th, #weather td, #weather tr { 
 		display: block; 
 	}
 	
 	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr { 
+	#weather thead tr { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
 	
-	tr { border: 1px solid #ccc; }
-	
-	td { 
+	#weather td { 
 		/* Behave  like a "row" */
 		border: none;
 		border-bottom: 1px solid #eee; 
@@ -35,27 +39,28 @@ and also iPads specifically.
 		padding-left: 50%; 
 	}
 	
-	td:before { 
+	#weather td:before { 
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
+		top: 0;
+		left: 0;
 		width: 45%; 
 		padding-right: 10px; 
 		white-space: nowrap;
+		font-weight: bold;
 	}
 	
 	/*
 	Label the data
 	*/
-	td:nth-of-type(1):before { content: "Datum a čas"; }
-	td:nth-of-type(2):before { content: "Směr a síla větru"; }
-	td:nth-of-type(3):before { content: "Minutová špička větru"; }
-	td:nth-of-type(4):before { content: "QNH letiště"; }
-	td:nth-of-type(5):before { content: "QNH regionu"; }
-	td:nth-of-type(6):before { content: "Teplota vzduch"; }
-	td:nth-of-type(7):before { content: "Východ a západ (UTC)"; }
+	#weather td:nth-of-type(1):before { content: "Datum a čas"; }
+	#weather td:nth-of-type(2):before { content: "Směr a síla větru"; }
+	#weather td:nth-of-type(3):before { content: "Minutová špička větru"; }
+	#weather td:nth-of-type(4):before { content: "QNH letiště"; }
+	#weather td:nth-of-type(5):before { content: "QNH regionu"; }
+	#weather td:nth-of-type(6):before { content: "Teplota vzduch"; }
+	#weather td:nth-of-type(7):before { content: "Východ a západ (UTC)"; }
 }
 
 
@@ -70,14 +75,19 @@ and also iPads specifically.
 		padding: 2rem;
 		border-bottom: 2px solid red;
 	}
+/*
 	.ppv-meteo-bar .ppv-data {
 		border: 1px solid green;
 		display: inline-block;
 	}
-
-	.ppv-background{ 
-		background-image: url('../img/PPV_Background.png');  
+*/
+	#register .ppv-background { 
+		background-image: url('../img/ppv_background.png');  
 		height: 55vh;
 		padding: 3rem;
+	}
+
+	#weather tr {
+		border-bottom: 1px solid #ccc;
 	}
  }
