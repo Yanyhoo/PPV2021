@@ -17,18 +17,10 @@
 </head>
 
 <body>
-	<div class="container ppv-section">
-		<div class="row">
-			<div class="col-md-2">
-				<img src="img/LogoPPV.png" alt="PPV 2022 logo" class="ppv-logo" />
-			</div>
-			<div class="col-md-10">
-				<h1 class="display-4 text-start">Plachtařský Pohár Vysočiny 2022</h1>
-			</div>
-		</div>	
+	<div id="header" class="container ppv-section">
 	</div>
 
-	<div class="container ppv-section" id="weather">
+	<div id="weather"class="container ppv-section">
 		<!-- Počasí -->
 		<table>
 			<thead>
@@ -55,7 +47,6 @@
 			</tbody>
 		</table>
 	</div>
-	</div>
 
 	<div class="container ppv-section" id="register">
 		<!-- Background image -->
@@ -63,15 +54,16 @@
 			<div class="grid">
 				<div class="align-items-center"><h1 class="mb-3 h2">23. - 31. 7. 2022</h1></div>
 				<div class="align-items-center"><h1 class="mb-3 h2">Letiště Havlíčkův Brod (LKHB)</h1></div>
-				<div class="align-items-center" ><button type="button" class="btn btn-secondary btn-lg" data-mdb-ripple-color="dark">Zaregistrujte se zde</button></div>				
+				<div class="align-items-center"><a href="./registration.html"><button type="button" class="btn btn-secondary btn-lg" data-mdb-ripple-color="dark">Zaregistrujte se zde</button></a></div>				
 			</div>		
 		</div>
-		<!-- Background image -->
-		
+		<!-- Background image -->	
 	</div>
+
 	<div class="container ppv-section">
 		Dokumenty
 	</div>
+
 	<div class="container ppv-section ppv-section--aktuality">
 		<h3 class="ppv-section__title">Aktuality</h3>
 		<ul class="ppv-list">
@@ -92,20 +84,28 @@
 			</li>
 		</ul>
 	</div>
+
 	<div class="container ppv-section">
 		Startovní listina
 	</div>
+
 	<div class="container ppv-section">
 		Web kamery
 	</div>
+
 	<div class="container ppv-section">
 		Kontakty
+	</div>
+
+	<div id="footer">
+		
 	</div>
 
 	<script type="text/javascript" src="js/mdb.min.js"></script>
 	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
 	<!-- Custom scripts -->
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/page.index.js"></script>
 </body>
 
 </html>

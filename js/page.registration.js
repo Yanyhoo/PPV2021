@@ -27,9 +27,14 @@ function afterSubmit(e) {
 	}
 	var url = "https://script.google.com/macros/s/AKfycbz31vAWCc9mx95dfJjsIghRa4KyN9OwJG3dQvPDs130i6qr9wr5pgSNHp4hV0igIe2s/exec";
 	fetch(url, {
-		method: 'POST',
-		cache: 'no-cache',
-		redirect: 'follow',
+		method: 'POST', // *GET, POST, PUT, DELETE, etc.
+		mode: 'no-cors', // no-cors, *cors, same-origin
+		cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+		credentials: 'omit', // include, *same-origin, omit
+		headers: {
+		  'Content-Type': 'application/json'
+		},
+		redirect: 'follow', // manual, *follow, error
 		body: JSON.stringify(info)
 
 	})
