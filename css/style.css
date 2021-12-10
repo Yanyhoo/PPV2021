@@ -1,14 +1,52 @@
-/* SMALL SCREEN */
 
+/* XS */
+
+html {
+	font-size: 12pt;
+}
 body {
 	min-width: 300px;
 }
-	#weather th,
-	#weather td {
-		text-align: left;
-		padding-right: 10px;
-		font-size: 80%;
-	}
+#page-header {
+	background: url(../img/ppv-bgr-4.png) no-repeat 50% 0;
+	min-height: 300px;
+}
+h1,
+h2 {
+	font-size: 1rem;
+	line-height: 1.2rem;
+	margin-bottom: 0;
+}
+h2 {
+	font-weight: 300;
+}
+.ppv-date,
+.ppv-place {
+	display: block;
+}
+#header {
+	background: #fff;
+	padding: 20px;
+}
+#header img {
+	height: 50px;
+}
+#weather {
+	display: none;
+}
+#weather th,
+#weather td {
+	text-align: left;
+	padding-right: 10px;
+	font-size: 80%;
+}
+#menu {
+	margin-top: 270px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	background: rgba(30, 40, 50);
+}
 
 
 /* 
@@ -17,7 +55,7 @@ Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
 and also iPads specifically.
 */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
 
 	/* Force table to not be like tables anymore */
 	#weather table, #weather thead, #weather tbody, #weather th, #weather td, #weather tr { 
@@ -64,17 +102,78 @@ and also iPads specifically.
 }
 
 
-
-
-
-
-/* BIG SCREEN */
-
-@media only screen and (min-width: 760px) {
-	.ppv-section {
-		padding: 2rem;
-		border-bottom: 2px solid red;
+/* SM */
+@media only screen and (min-width: 576px) {
+	#page-header {
+		background-size: 540px auto;
+		background-position: 50% 0;
+		min-height: 160px;
 	}
+	#header {
+		background: transparent;
+		position: relative;
+	}
+	#header img {
+		position: absolute;
+		left: 0;
+		top: 10px;
+		height: 30px;
+	}
+	#menu {
+		margin-top: 150px;
+	}
+}
+
+
+/* MD */
+@media only screen and (min-width: 768px) {
+
+	#page-header {
+		background-size: 720px auto;
+		background-position: 50% 0;
+		min-height: 220px;
+	}
+	#header img {
+		top: 20px;
+		height: 35px;
+	}
+	#menu {
+		margin-top: 200px;
+	}
+	h1 {
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+	}
+ }
+
+/* LG */
+@media only screen and (min-width: 992px) {
+	#page-header {
+		background-size: 960px auto;
+		background-position: 50% 0;
+		min-height: 290px;
+	}
+	#header img {
+		top: 20px;
+		height: 50px;
+	}
+	#menu {
+		margin-top: 250px;
+		background: rgba(30, 40, 50, 0.4);
+	}
+	h1 {
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+	}
+	h2 {
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+	}
+	.ppv-date,
+	.ppv-place {
+		display: inline;
+	}
+
 /*
 	.ppv-meteo-bar .ppv-data {
 		border: 1px solid green;
@@ -82,12 +181,47 @@ and also iPads specifically.
 	}
 */
 	#register .ppv-background { 
-		background-image: url('../img/ppv_background.png');  
+/*		background-image: url('../img/ppv_background.png');  
 		height: 55vh;
-		padding: 3rem;
+		padding: 3rem; */
 	}
 
 	#weather tr {
 		border-bottom: 1px solid #ccc;
 	}
- }
+}
+
+/* XL */
+@media only screen and (min-width: 1200px) {
+	#page-header {
+		background-size: 1140px auto;
+		min-height: 340px;
+	}
+	#header img {
+		top: 30px;
+		height: 60px;
+	}
+	#menu {
+		margin-top: 400px;
+	}
+	h1 {
+		font-size: 2rem;
+		line-height: 2.4rem;
+	}
+	h2 {
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+	}
+
+}
+
+/* XXL */
+@media only screen and (min-width: 1400px) {
+	#page-header {
+		background-size: 1320px auto;
+		min-height: 400px;
+	}
+	#menu {
+		margin-top: 420px;
+	}
+}
