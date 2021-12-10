@@ -17,52 +17,60 @@
 </head>
 
 <body>
-	<div id="header" class="container ppv-section">
-	</div>
-
-	<div id="weather"class="container ppv-section">
-		<!-- Počasí -->
-		<table>
-			<thead>
-				<tr>
-					<th scope="col">Datum a čas</th>
-					<th scope="col">Směr a síla větru</th>
-					<th scope="col">Minutová špička větru</th>
-					<th scope="col">QNH letiště</th>
-					<th scope="col">QNH regionu</th>
-					<th scope="col">Teplota vzduch<br> </th>
-					<th scope="col">Východ a západ (UTC)</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="ppv-data data-date ">24.11.2021 17:54</td>
-					<td class="ppv-data data-wind-cur">127°/10</td>
-					<td class="ppv-data data-wind-max">13.1</td>
-					<td class="ppv-data data-QNH">1021</td>
-					<td class="ppv-data data-rQNH">1015</td>
-					<td class="ppv-data data-temp">3.3°</td>
-					<td class="ppv-data data-SRS">6:23 - 15:05</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div class="container ppv-section" id="register">
-		<!-- Background image -->
-		<div class="ppv-background bg-image d-flex rounded justify-content-center text-center mb-5 text-white">
-			<div class="grid">
-				<div class="align-items-center"><h1 class="mb-3 h2">23. - 31. 7. 2022</h1></div>
-				<div class="align-items-center"><h1 class="mb-3 h2">Letiště Havlíčkův Brod (LKHB)</h1></div>
-				<div class="align-items-center"><a href="./registration.html"><button type="button" class="btn btn-secondary btn-lg" data-mdb-ripple-color="dark">Zaregistrujte se zde</button></a></div>				
-			</div>		
+	<div id="page-header" class="mb-3">
+		<div id="header" class="container ppv-section">
 		</div>
-		<!-- Background image -->	
-	</div>
 
-	<div class="container ppv-section">
-		Dokumenty
+		<div id="weather"class="container ppv-section">
+			<!-- Počasí -->
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Datum a čas</th>
+						<th scope="col">Směr a síla větru</th>
+						<th scope="col">Minutová špička větru</th>
+						<th scope="col">QNH letiště</th>
+						<th scope="col">QNH regionu</th>
+						<th scope="col">Teplota vzduch<br> </th>
+						<th scope="col">Východ a západ (UTC)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="ppv-data data-date ">24.11.2021 17:54</td>
+						<td class="ppv-data data-wind-cur">127°/10</td>
+						<td class="ppv-data data-wind-max">13.1</td>
+						<td class="ppv-data data-QNH">1021</td>
+						<td class="ppv-data data-rQNH">1015</td>
+						<td class="ppv-data data-temp">3.3°</td>
+						<td class="ppv-data data-SRS">6:23 - 15:05</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div  id="menu" class="container ppv-section">
+			<div class="d-lg-flex flex-row align-items-center">
+				<div class="p-2">
+					<h1 class="text-start">Plachtařský Pohár Vysočiny 2022</h1>
+					<h2 class="text-start">
+						<span class="ppv-date">23. - 31. 7. 2022,</span> 
+						<span class="ppv-place">Letiště Havlíčkův Brod (LKHB)</span>
+					</h2>
+				</div>
+				<div class="p-2">
+					<a href="./registration.html" class="btn btn-primary d-block" data-mdb-ripple-color="dark">Zaregistrujte se zde</a>
+				</div>
+				<div class="p-2">
+					<a href="./documents.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark">Dokumenty</a>
+				</div>
+				<div class="p-2">
+					<a href="./starting-list.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark">Startovní listina</a>
+				</div>
+			</div>
+		</div>
 	</div>
+	
 
 	<div class="container ppv-section ppv-section--aktuality">
 		<h3 class="ppv-section__title">Aktuality</h3>
@@ -85,20 +93,20 @@
 		</ul>
 	</div>
 
-	<div class="container ppv-section">
-		Startovní listina
-	</div>
-
-	<div class="container ppv-section">
-		Web kamery
-	</div>
-
-	<div class="container ppv-section">
-		Kontakty
-	</div>
-
-	<div id="footer">
 		
+	<div id="page-content" class="mb-3">
+		<div class="container ppv-section">
+			Web kamery
+		</div>
+
+		<div class="container ppv-section">
+			Kontakty
+		</div>
+	</div>
+
+	<div id="page-footer">
+		<div id="footer" class="container">	
+		</div>
 	</div>
 
 	<script type="text/javascript" src="js/mdb.min.js"></script>
