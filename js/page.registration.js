@@ -45,7 +45,7 @@ function afterSubmit(e) {
 	})
 	.catch(err => {
 		console.log(err);
-		console.log("Něco se pokazilo");
+		console.log("Něco se pokazilo: " + JSON.stringify(info));
 	})
 }
 
