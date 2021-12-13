@@ -8,8 +8,10 @@
 	<title>PPV2022</title>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-	<!-- Google Fonts Roboto -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet" />
 	<!-- MDB -->
 	<link rel="stylesheet" href="css/mdb.min.css" />
 	<!-- Custom styles -->
@@ -17,12 +19,9 @@
 </head>
 
 <body>
-	<div id="page-header" class="mb-3">
-		<div id="header" class="container ppv-section">
-		</div>
 
-		<div id="weather"class="container ppv-section">
-			<!-- Počasí -->
+	<!-- div id="weather" class="container mb-3">
+		<div class="ppv-section">
 			<table>
 				<thead>
 					<tr>
@@ -31,11 +30,9 @@
 						<th scope="col">Minutová špička větru</th>
 						<th scope="col">QNH letiště</th>
 						<th scope="col">QNH regionu</th>
-						<th scope="col">Teplota vzduch<br> </th>
+						<th scope="col">Teplota vzduch</th>
 						<th scope="col">Východ a západ (UTC)</th>
 					</tr>
-				</thead>
-				<tbody>
 					<tr>
 						<td class="ppv-data data-date ">24.11.2021 17:54</td>
 						<td class="ppv-data data-wind-cur">127°/10</td>
@@ -45,56 +42,87 @@
 						<td class="ppv-data data-temp">3.3°</td>
 						<td class="ppv-data data-SRS">6:23 - 15:05</td>
 					</tr>
-				</tbody>
+				</thead>
 			</table>
 		</div>
+	</div -->
 
-		<div  id="menu" class="container ppv-section">
-			<div class="d-lg-flex flex-row align-items-center">
-				<div class="p-2">
+
+	<div id="page-header" class="mb-3">
+		<div id="header" class="container ppv-section">
+		</div>
+
+		<div id="menu" class="container ppv-section">
+			<div class="row">
+				<div class="col-12 col-lg-6 mt-3 my-lg-3">
 					<h1 class="text-start">Plachtařský Pohár Vysočiny 2022</h1>
 					<h2 class="text-start">
 						<span class="ppv-date">23. - 31. 7. 2022,</span> 
 						<span class="ppv-place">Letiště Havlíčkův Brod (LKHB)</span>
 					</h2>
 				</div>
-				<div class="p-2">
-					<a href="./registration.html" class="btn btn-primary d-block" data-mdb-ripple-color="dark">Zaregistrujte se zde</a>
+
+				<div class="col-12 col-md-5 col-lg-2 mt-3 my-lg-4">
+					<a href="./registration.html" class="btn btn-primary d-block" data-mdb-ripple-color="dark">Registrace</a>
 				</div>
-				<div class="p-2">
+				<div class="col-12 col-md-3 col-lg-2 mt-3 my-lg-4">
 					<a href="./documents.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark">Dokumenty</a>
 				</div>
-				<div class="p-2">
+				<div class="col-12 col-md-4 col-lg-2 my-3 my-lg-4">
 					<a href="./starting-list.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark">Startovní listina</a>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	
+
+
+	<div id="page-content" class="mb-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-7 ppv-section">
+					<h3 class="ppv-section__title">Aktuality</h3>
+					<ul class="ppv-list">
+						<li class="ppv-list-item">
+							<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
+								modi? Porro aliquam dolore aut soluta! </p>
+						</li>
+						<li class="ppv-list-item">
+							<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
+								modi? Porro aliquam dolore aut soluta! </p>
+						</li>
+						<li class="ppv-list-item">
+							<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
+								modi? Porro aliquam dolore aut soluta! </p>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-5 col-lg-4 ppv-section">
+					<div id="weather"><!-- Počasí -->
+						<h3 class="ppv-section__title">Počasí</h3>
+						<table>
+							<thead>
+								<tr><th scope="col">Datum a čas</th><td class="ppv-data data-date">24.11.2021 17:54</td></tr>
+								<tr><th scope="col">Směr a síla větru</th><td class="ppv-data data-wind-cur">127°/10</td></tr>
+								<tr><th scope="col">Minutová špička větru</th><td class="ppv-data data-wind-max">13.1</td></tr>
+								<tr><th scope="col">QNH letiště</th><td class="ppv-data data-QNH">1021</td></tr>
+								<tr><th scope="col">QNH regionu</th><td class="ppv-data data-rQNH">1015</td></tr>
+								<tr><th scope="col">Teplota vzduch</th><td class="ppv-data data-temp">3.3°</td></tr>
+								<tr><th scope="col">Východ a západ (UTC)</th><td class="ppv-data data-SRS">6:23 - 15:05</td></tr>
+							</thead>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
 
-	<div class="container ppv-section ppv-section--aktuality">
-		<h3 class="ppv-section__title">Aktuality</h3>
-		<ul class="ppv-list">
-			<li class="ppv-list-item">
-				<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
-					modi? Porro aliquam dolore aut soluta! </p>
-			</li>
-			<li class="ppv-list-item">
-				<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
-					modi? Porro aliquam dolore aut soluta! </p>
-			</li>
-			<li class="ppv-list-item">
-				<h5 class="ppv-list-item__title"><span class="ppv-list-item__time">10:22</span> Start ve 13:00</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus corporis omnis ducimus
-					modi? Porro aliquam dolore aut soluta! </p>
-			</li>
-		</ul>
-	</div>
-
-		
-	<div id="page-content" class="mb-3">
 		<div class="container ppv-section">
 			Web kamery
 		</div>

@@ -8,8 +8,10 @@
 	<title>PPV2022 Registrace</title>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-	<!-- Google Fonts Roboto -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
 	<!-- MDB -->
 	<link rel="stylesheet" href="css/mdb.min.css" />
 	<!-- Custom styles -->
@@ -19,13 +21,31 @@
 <body>
 	<div id="page-header" class="mb-3">
 		<div id="header" class="container ppv-section"></div>
+		<div id="menu" class="container ppv-section">
+			<div class="row">
+				<div class="col-12 col-lg-6 mt-3 my-lg-3">
+					<h1 class="text-start">Plachtařský Pohár Vysočiny 2022</h1>
+					<h2 class="text-start">
+						Registrační formulář
+					</h2>
+				</div>
+
+				<div class="col-12 col-md-5 col-lg-2 mt-3 my-lg-4">
+					
+				</div>
+				<div class="col-12 col-md-3 col-lg-2 mt-3 my-lg-4">
+					<a href="./documents.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark">Dokumenty</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-2 my-3 my-lg-4">
+					<a href="./starting-list.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark">Startovní listina</a>
+				</div>
+
+			</div>
+		</div>
 	</div>
 
 	<div id="page-content" class="mb-3">
 		<div class="container mb-4">
-			<div class="row">
-				<h3>PPV 2022 - Registrační formulář</h3>
-			</div>
 			<form id="registryForm">
 
 				<div class="row mb-3" id="gliderClass">
@@ -37,7 +57,7 @@
 								name="flexRadioDefault"
 								id="gliderClass1"
 							/>
-							<label class="form-check-label" for="flexRadioDefault1"> Klubová třída </label>
+							<label class="form-check-label" for="gliderClass1"> Klubová třída </label>
 						</div>
 
 						<div class="form-check">
@@ -47,7 +67,7 @@
 								name="flexRadioDefault"
 								id="gliderClass2"
 							/>
-							<label class="form-check-label" for="flexRadioDefault2"> Kombinovaná třída </label>
+							<label class="form-check-label" for="gliderClass2"> Kombinovaná třída </label>
 						</div>
 					</div>
 				</div>
@@ -123,10 +143,17 @@
 
 				<div class="row mb-4">
 					<div class="col-12 col-md-4">
-						<button type="submit" class="btn btn-primary btn-block mb-4" id="submitBtn">
+						<button type="submit" class="btn btn-primary btn-block mb-3" id="submitBtn">
 							Odeslat	registraci
 						</button>
 					</div>
+
+					<div class="col-12 col-md-2">
+						<a href="./index.html" class="btn btn-secondary btn-block mb-3">
+							Zpět
+						</a>
+					</div>
+
 				</div>
 
 			</form>
