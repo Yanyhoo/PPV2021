@@ -27,80 +27,108 @@
 				<h3>PPV 2022 - Registrační formulář</h3>
 			</div>
 			<form id="registryForm">
-				<div class="row mb-4">
-					<div class="col-3">
-						<div class="form-outline">
-							<input type="text" id="fname" class="form-control" />
-							<label class="form-label" for="fname">Jméno</label>
+
+				<div class="row mb-3" id="gliderClass">
+					<div class="col-12">
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="radio"
+								name="flexRadioDefault"
+								id="gliderClass1"
+							/>
+							<label class="form-check-label" for="flexRadioDefault1"> Klubová třída </label>
+						</div>
+
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="radio"
+								name="flexRadioDefault"
+								id="gliderClass2"
+							/>
+							<label class="form-check-label" for="flexRadioDefault2"> Kombinovaná třída </label>
 						</div>
 					</div>
-					<div class="col-3">
+				</div>
+
+
+				<div class="row">
+					<div class="col-12 col-md-6 mb-3">
 						<div class="form-outline">
-							<input type="text" id="sName" class="form-control" />
-							<label class="form-label" for="sName">Příjmení</label>
+							<input type="text" id="glider" class="form-control" />
+							<label class="form-label" for="glider">Typ letadla</label>
 						</div>
 					</div>
-					<div class="col-4">
+				</div>
+
+				<div class="row">
+					<div class="col-8 col-md-4 mb-3">
+						<div class="form-outline">
+							<input type="text" id="imat" class="form-control" />
+							<label class="form-label" for="imat">Imatrikulace</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-3">
+					<div class="col-6 col-md-3">
+						<div class="form-outline">
+							<input type="text" id="code" class="form-control" />
+							<label class="form-label" for="code">Startovní znak</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-5">
+					<div class="col-12 col-md-8">
 						<div class="form-outline">
 							<input type="text" id="club" class="form-control" />
 							<label class="form-label" for="club">Aeroklub</label>
 						</div>
 					</div>
 				</div>
+
 				<div class="row">
-					<div class="col-3">
+					<div class="col-12 col-md-3 mb-3">
+						<div class="form-outline">
+							<input type="text" id="fname" class="form-control" />
+							<label class="form-label" for="fname">Jméno</label>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-5 mb-3">
+						<div class="form-outline">
+							<input type="text" id="sName" class="form-control" />
+							<label class="form-label" for="sName">Příjmení</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-md-5 mb-3">
 						<div class="form-outline">
 							<input type="email" id="email" class="form-control" />
 							<label class="form-label" for="email">Email</label>
 						</div>
 					</div>
-					<div class="col-3">
+
+					<div class="col-8 col-md-3 mb-5">
 						<div class="form-outline">
 							<input type="number" id="phone" class="form-control" />
 							<label class="form-label" for="phone">Telefon</label>
 						</div>
 					</div>
-
 				</div>
-				<br>
-				<div class="row">
-					<div class="col-3">
-						<div class="form-outline">
-							<input type="text" id="glider" class="form-control" />
-							<label class="form-label" for="glider">Typ letadla</label>
-						</div>
-					</div>
-					<div class="col-2">
-						<div class="form-outline">
-							<input type="text" id="imat" class="form-control" />
-							<label class="form-label" for="imat">Imatrikulace</label>
-						</div>
-					</div>
-					<div class="col-2">
-						<div class="form-outline">
-							<input type="text" id="code" class="form-control" />
-							<label class="form-label" for="code">Startovní znak</label>
-						</div>
-					</div>
-					<br>
-					<div class="col-2">
-						<select class="form-select form-control" id="gliderClass">
-							<option value=""></option>
-							<option value="1">Klubová třída</option>
-							<option value="2">Kombinovaná třída</option>
-						</select>
-						<label class="form-label select-label" for="gliderClass">Soutěžní třída</label>
-					</div>
 
-
-				</div>
-				<br>
-				<div class="row">
-					<div class="col-2">
-						<button type="submit" class="btn btn-primary btn-block mb-4" id="submitBtn">Odeslat
-							registraci</button>
+				<div class="row mb-4">
+					<div class="col-12 col-md-4">
+						<button type="submit" class="btn btn-primary btn-block mb-4" id="submitBtn">
+							Odeslat	registraci
+						</button>
 					</div>
 				</div>
+
 			</form>
 		</div>
 	</div>
