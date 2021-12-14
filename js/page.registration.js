@@ -7,7 +7,7 @@ var phone = document.getElementById("phone");
 var glider = document.getElementById("glider");
 var imat = document.getElementById("imat");
 var code = document.getElementById("code");
-var gliderClass = document.getElementById("gliderClass");
+var gliderClass2 = document.getElementById("gliderClass2");
 var submitBtn = document.getElementById("submitBtn");
 
 
@@ -23,9 +23,12 @@ function afterSubmit(e) {
 		glider: glider.value,
 		imatriculation: imat.value,
 		code: code.value,
-		raceclass: gliderClass.value,
+		raceclass: gliderClass2.checked ? "Klub" : "Kombi"
 	}
+
+
 	var url = "https://script.google.com/macros/s/AKfycbz31vAWCc9mx95dfJjsIghRa4KyN9OwJG3dQvPDs130i6qr9wr5pgSNHp4hV0igIe2s/exec";
+
 	fetch(url, {
 		method: 'POST', // *GET, POST, PUT, DELETE, etc.
 		mode: 'no-cors', // no-cors, *cors, same-origin
@@ -36,17 +39,18 @@ function afterSubmit(e) {
 		},
 		redirect: 'follow', // manual, *follow, error
 		body: JSON.stringify(info)
-
-	})
-	.then(res => res.json())
-	.then(res => {
+		// body: JSON.stringify({"name":"Test","surname":"Test","aeroclub":"Aeroklub Praha Letňany","raceclass":"Klub","glider":"ASW15b","imatriculation":"OK-1985","code":"XY","email":"UrnerM@seznam.cz","phone":""})
+	}).then(res => {
+		console.log(res);
+		res.text()
+	}).then(res => {
+		// resolve(res ? JSON.parse(res) : {})
 		console.log(res);
 		registryForm.reset();
-	})
-	.catch(err => {
+	}).catch(err => {
 		console.log(err);
 		console.log("Něco se pokazilo: " + JSON.stringify(info));
-	})
+	});
 }
 
 registryForm.addEventListener("submit", afterSubmit);
