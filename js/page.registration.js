@@ -27,7 +27,7 @@ function afterSubmit(e) {
 	}
 
 
-	var url = "https://script.google.com/macros/s/AKfycbz31vAWCc9mx95dfJjsIghRa4KyN9OwJG3dQvPDs130i6qr9wr5pgSNHp4hV0igIe2s/exec";
+	var url = "https://script.google.com/macros/s/AKfycbx1Fn-A9Ph9ZlJ-nsSGV1_wl5btbkHgw9wEPBZh2NFSsTe9adMuPJwjJJfDA247YvMn/exec";
 
 	fetch(url, {
 		method: 'POST', // *GET, POST, PUT, DELETE, etc.
