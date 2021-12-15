@@ -1,0 +1,12 @@
+*Setting colour and line of P airspace
+AC P
+SP 0,2,255,0,0
+SB -1,-1,-1
+
+AC P
+AN PUKLICE
+AH FL65
+AL GND
+V X=49:21:38 N 015:38:50 E
+DC 1.5 *NM
+
