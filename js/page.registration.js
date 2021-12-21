@@ -35,7 +35,7 @@ function afterSubmit(e) {
 			showError('Prosím vyplňte co nejvíce informací, přinejmenším musí být uvedeno Vaše příjmení a e-mail');
 		} else {
 
-			var url = "https://script.google.com/macros/s/AKfycbx1Fn-A9Ph9ZlJ-nsSGV1_wl5btbkHgw9wEPBZh2NFSsTe9adMuPJwjJJfDA247YvMn/exec";
+			var url = "https://script.google.com/macros/s/AKfycbxiPurc-nU9t6nNnPZRWDS70552FrSUpPWMG1aQPFWbY1wHKsgvmzWKxvmV5-ov6j-a/exec";
 
 			fetch(url, {
 				method: 'POST', // *GET, POST, PUT, DELETE, etc.
