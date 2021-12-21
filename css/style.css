@@ -30,7 +30,9 @@ h1,
 h3 {
 	text-transform: uppercase;
 }
-
+.table tbody {
+	font-weight: 400;
+}
 
 
 /*** COLORS ***/
