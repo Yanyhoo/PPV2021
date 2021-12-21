@@ -8,7 +8,8 @@ var phone = document.getElementById("phone");
 var glider = document.getElementById("glider");
 var imat = document.getElementById("imat");
 var code = document.getElementById("code");
-var gliderClass2 = document.getElementById("gliderClass2");
+var gliderClassCombi = document.getElementById("gliderClassCombi");
+var gliderClassClub = document.getElementById("gliderClassClub");
 var submitBtn = document.getElementById("submitBtn");
 
 
@@ -26,7 +27,12 @@ function afterSubmit(e) {
 			glider: glider.value,
 			imatriculation: imat.value,
 			code: code.value,
-			raceclass: gliderClass2.checked ? "Klub" : "Kombi"
+			raceclass: ""
+		}
+		if (gliderClassCombi.checked) {
+			info.raceclass = "Kombi"
+		} else if (gliderClassClub.checked) {
+			info.raceclass = "Klub"
 		}
 
 		if (info.surname === '') {
