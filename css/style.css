@@ -37,8 +37,9 @@ h3 {
 
 /*** COLORS ***/
 
-/* XS */
-
+.table th {
+	background: #eee;
+}
 #menu {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
@@ -59,6 +60,7 @@ h3 {
 	color: #333;
 	background: #eee;
 }
+
 
 
 
