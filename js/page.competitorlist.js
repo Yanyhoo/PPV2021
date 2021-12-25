@@ -2,7 +2,7 @@
 
 
 (function ($) {
-	$(document).ready( function () {
+	$(document).ready( () => {
 		readCompetitorList();
 
 	});
@@ -15,24 +15,31 @@ async function readCompetitorList () {
 	console.log(0);
 	const response = await fetch(apiUrl);
 	const responseData = await response.json();
-	const unPaid = responseData[0].data.filter((item) => 
+	const unPaid = responseData[0].data.filter( (item) => 
 		item.paymentDate === '');
-	const club = responseData[0].data.filter((item) => 
+	const club = responseData[0].data.filter( (item) => 
 		(item.raceclass === 'Klub') 
 		&& (item.paymentDate !== ''));
-	const combi = responseData[0].data.filter((item) => 
+	const combi = responseData[0].data.filter( (item) => 
 		(item.raceclass === 'Kombi')  
 		&& (item.paymentDate !== ''));
 
-		buildCompetitorTable(unPaid);
-		buildCompetitorTable(combi);
-		buildCompetitorTable(club);
+//	buildCompetitorTable(unPaid, 'registrationTable');
+//	buildCompetitorTable(combi, 'combiTable');
+//	buildCompetitorTable(club, 'clubTable');
+
+	buildCompetitorTable({ data: unPaid, tableId: 'registrationTable' })
+	buildCompetitorTable({ data: combi, tableId: 'combiTable' })
+	buildCompetitorTable({ data: club, tableId: 'clubTable' })
 	
 }
 
+function buildCompetitorTable(config) {
+	const tableElm = document.getElementById(config.tableId);
+	const data = config.data;
 
-function buildCompetitorTable(data) {
-	var tableElm = document.getElementById('registrationTable');
+// function buildCompetitorTable(data, tableId) {
+//	var tableElm = document.getElementById(tableId);
 
 	var tableBuffer = [];
 	tableBuffer.push('<table class="table">');
