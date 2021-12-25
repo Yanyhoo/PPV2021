@@ -12,9 +12,22 @@
 
 async function readCompetitorList () {
 	const apiUrl = 'https://script.google.com/macros/s/AKfycbyw40My6pltrf9HvvUwvyE8JsW02DH5KMPsnAVRe1cXzRGrkE80luxex4RO1-LfNjFf/exec';
+	console.log(0);
 	const response = await fetch(apiUrl);
 	const responseData = await response.json();
-	buildCompetitorTable(responseData[0].data);
+	const unPaid = responseData[0].data.filter((item) => 
+		item.paymentDate === '');
+	const club = responseData[0].data.filter((item) => 
+		(item.raceclass === 'Klub') 
+		&& (item.paymentDate !== ''));
+	const combi = responseData[0].data.filter((item) => 
+		(item.raceclass === 'Kombi')  
+		&& (item.paymentDate !== ''));
+
+		buildCompetitorTable(unPaid);
+		buildCompetitorTable(combi);
+		buildCompetitorTable(club);
+	
 }
 
 
