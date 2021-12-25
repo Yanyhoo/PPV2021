@@ -48,24 +48,78 @@
 	</div>
 
 	<div id="page-content" class="mb-3">
-		<div class="container mb-4 ppv-section">
-
-			<h3 class="ppv-section__title">
-				Registrace čekající na zaplacení startovného
-			</h3>
-			<div id="registrationTable"></div>
-		</div>
-		<div class="container mb-4 ppv-section">
-			<h3 class="ppv-section__title">
-				Klubová třída
-			</h3>
-			<div id="clubTable"></div>
-		</div>
-		<div class="container mb-4 ppv-section">
-			<h3 class="ppv-section__title">
-				Kombinovaná třída
-			</h3>
-			<div id="combiTable"></div>
+		<div class="container p-0">
+			
+			<ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link active"
+						id="tab1-btn"
+						data-mdb-toggle="tab"
+						data-mdb-target="#tab1"
+						type="button"
+						role="tab"
+						aria-controls="home"
+						aria-selected="true"
+					>
+						Registrace čekající na zaplacení startovného
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link"
+						id="tab2-btn"
+						data-mdb-toggle="tab"
+						data-mdb-target="#tab2"
+						type="button"
+						role="tab"
+						aria-controls="profile"
+						aria-selected="false"
+					>
+						Klubová třída
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link"
+						id="tab3-btn"
+						data-mdb-toggle="tab"
+						data-mdb-target="#tab3"
+						type="button"
+						role="tab"
+						aria-controls="contact"
+						aria-selected="false"
+					>
+						Kombinovaná třída
+					</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent0">
+				<div
+					class="tab-pane fade show active"
+					id="tab1"
+					role="tabpanel"
+					aria-labelledby="tab1-btn"
+				>
+					<div id="registrationTable">Načítám seznam registrovaných...</div>
+				</div>
+				<div
+					class="tab-pane fade"
+					id="tab2"
+					role="tabpanel"
+					aria-labelledby="tab2-btn"
+				>
+					<div id="clubTable">Načítám seznam přihlášených...</div>
+				</div>
+				<div
+					class="tab-pane fade"
+					id="tab3-btn"
+					role="tabpanel"
+					aria-labelledby="tab3-btn"
+				>
+					<div id="combiTable">Načítám seznam přihlášených...</div>
+				</div>
+			</div>
 
 		</div>
 	</div>
