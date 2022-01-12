@@ -39,6 +39,9 @@ h3 {
 
 
 /*** COLORS ***/
+.ppv-section__title {
+	border-bottom: 1px solid #ccc;
+}
 
 .table th {
 	background: #eee;
@@ -63,7 +66,13 @@ h3 {
 	color: #333;
 	background: #eee;
 }
-
+footer {
+	background: #666;
+}
+footer,
+footer a {
+	color: #fff;
+}
 
 
 
@@ -76,13 +85,17 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+.ppv-section__title {
+	padding-bottom: 5px;
+}
+
 .ppv-list {
 	padding: 0;
 }
 .ppv-list-item {
 	list-style: none;
 	padding: 10px 0;
-	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
 .ppv-list-item__title {
 	margin-bottom: 0;
@@ -180,7 +193,6 @@ body {
 /*** WEATHER ***/
 
 #weather table {
-	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
 #weather table th,
