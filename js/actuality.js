@@ -15,12 +15,10 @@ async function readActualityList () {
 	console.log(0);
 	const response = await fetch(apiUrl);
 	const responseData = await response.json();
-	const unPaid = responseData[0].data.filter( (item) => 
-		item.paymentDate === '');
+	const displayActuality = responseData[0].data.filter( (item) => 
+		item.Show === TRUE);
 	
-
-
-	buildActualityTable({ data: unPaid, tableId: 'registrationTable' })
+	buildActualityTable({ data: displayActuality, tableId: 'actualityTable' })
 	
 	
 }
