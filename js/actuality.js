@@ -30,35 +30,18 @@ function buildCompetitorTable(config) {
 	var tableBuffer = [];
 	tableBuffer.push('<table class="table">');
 
-	tableBuffer.push('<tr><th>');
-	tableBuffer.push('Jméno a příjmení');
-	tableBuffer.push('</th><th>');
-	tableBuffer.push('Aeroklub');
-	tableBuffer.push('</th><th>');
-	tableBuffer.push('Soutěžní třída');
-	tableBuffer.push('</th><th>');
-	tableBuffer.push('Kluzák');
-	tableBuffer.push('</th><th>');
-	tableBuffer.push('Imatrikulace');
-	tableBuffer.push('</th><th>');
-	tableBuffer.push('Startovní znak');
-	tableBuffer.push('</th></tr>');
-
 	for(var i = 0, n = data.length; i < n; i++) {
 		tableBuffer.push('<tr><td>');
-		tableBuffer.push(data[i].name);
+		tableBuffer.push(data[i].Date);
 		tableBuffer.push(' ');
-		tableBuffer.push(data[i].surname);
+		tableBuffer.push(data[i].Time);
 		tableBuffer.push('</td><td>');
-		tableBuffer.push(data[i].aeroclub);
+		tableBuffer.push(data[i].Header);
 		tableBuffer.push('</td><td>');
-		tableBuffer.push(data[i].raceclass);
+		tableBuffer.push(data[i].BodyText);
 		tableBuffer.push('</td><td>');
-		tableBuffer.push(data[i].glider);
-		tableBuffer.push('</td><td>');
-		tableBuffer.push(data[i].imatriculation);
-		tableBuffer.push('</td><td>');
-		tableBuffer.push(data[i].code);
+		tableBuffer.push(data[i].LinkText);
+		tableBuffer.push(data[i].LinkURL);
 		tableBuffer.push('</td></tr>');
 	}
 	tableBuffer.push('</table>');
