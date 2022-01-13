@@ -2,7 +2,7 @@
 
 
 (function ($) {
-	$(document).ready( () => {
+	$(document).ready(() => {
 		readActualityList();
 
 	});
@@ -10,41 +10,42 @@
 })(jQuery);
 
 
-async function readActualityList () {
+async function readActualityList() {
 	const apiUrl = 'https://script.google.com/macros/s/AKfycbxtZXbNHdgQV7nn7izitD__0jkr3UOOn6IDudN6EMY7phgHSZ2hkL-omXOvgh_AI1Ll8w/exec';
 	console.log(0);
 	const response = await fetch(apiUrl);
 	const responseData = await response.json();
-	const displayActuality = responseData[0].data.filter( (item) => 
+	const displayActuality = responseData[0].data.filter((item) =>
 		item.Show === TRUE);
-	
-	buildActualityTable({ data: displayActuality, tableId: 'actualityTable' })
-	
-	
+
+	buildActualityTable({ data: displayActuality, actualitiesId: 'actualities' })
+
+
 }
 
 function buildCompetitorTable(config) {
-	const tableElm = document.getElementById(config.tableId);
+	const actualitiesElm = document.getElementById(config.actualitiesId);
 	const data = config.data;
 
 	var tableBuffer = [];
-	tableBuffer.push('<table class="table">');
+	tableBuffer.push('<ul class="ppv-list">');
 
-	for(var i = 0, n = data.length; i < n; i++) {
-		tableBuffer.push('<tr><td>');
+	for (var i = 0, n = data.length; i < n; i++) {
+		tableBuffer.push('<li class="ppv-list-item"><h5 class="ppv-list-item__title"><span class="ppv-list-item__time">');
 		tableBuffer.push(data[i].Date);
 		tableBuffer.push(' ');
 		tableBuffer.push(data[i].Time);
-		tableBuffer.push('</td><td>');
+		tableBuffer.push('</span>');
 		tableBuffer.push(data[i].Header);
-		tableBuffer.push('</td><td>');
+		tableBuffer.push('</h5><p>');
 		tableBuffer.push(data[i].BodyText);
-		tableBuffer.push('</td><td>');
-		tableBuffer.push(data[i].LinkText);
+		tableBuffer.push('<a href="');
 		tableBuffer.push(data[i].LinkURL);
-		tableBuffer.push('</td></tr>');
+		tableBuffer.push('">');
+		tableBuffer.push(data[i].LinkText);		
+		tableBuffer.push('</a></p></li>');
 	}
-	tableBuffer.push('</table>');
+	tableBuffer.push('</ul>');
 
-	tableElm.innerHTML = tableBuffer.join('');
+	actualitiesElm.innerHTML = tableBuffer.join('');
 }
