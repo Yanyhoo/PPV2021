@@ -34,7 +34,9 @@ h3 {
 .table tbody {
 	font-weight: 400;
 }
-
+#actualities p {
+	margin-bottom: 0;
+}
 
 
 

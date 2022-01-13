@@ -69,7 +69,7 @@
 			tableBuffer.push(data[i].Header);
 			tableBuffer.push('</h5><p>');
 			tableBuffer.push(data[i].BodyText);
-			tableBuffer.push(' <a href="');
+			tableBuffer.push('</p><p><a href="');
 			tableBuffer.push(data[i].LinkURL);
 			tableBuffer.push('">');
 			tableBuffer.push(data[i].LinkText);		
