@@ -2,7 +2,7 @@
 
 
 (function ($) {
-	$(document).ready( () => {
+	$(document).ready(() => {
 		readCompetitorList();
 
 	});
@@ -10,36 +10,37 @@
 })(jQuery);
 
 
-async function readCompetitorList () {
+async function readCompetitorList() {
 	const apiUrl = 'https://script.google.com/macros/s/AKfycbyw40My6pltrf9HvvUwvyE8JsW02DH5KMPsnAVRe1cXzRGrkE80luxex4RO1-LfNjFf/exec';
 	console.log(0);
 	const response = await fetch(apiUrl);
 	const responseData = await response.json();
-	const unPaid = responseData[0].data.filter( (item) => 
-		item.paymentDate === '');
-	const club = responseData[0].data.filter( (item) => 
-		(item.raceclass === 'Klub') 
-		&& (item.paymentDate !== ''));
-	const combi = responseData[0].data.filter( (item) => 
-		(item.raceclass === 'Kombi')  
-		&& (item.paymentDate !== ''));
 
-//	buildCompetitorTable(unPaid, 'registrationTable');
-//	buildCompetitorTable(combi, 'combiTable');
-//	buildCompetitorTable(club, 'clubTable');
+	const club = responseData[0].data.filter((item) =>
+		(item.raceclass === 'Klub')
+		&& (item.paymentDate !== ''));
+	const combi = responseData[0].data.filter((item) =>
+		(item.raceclass === 'Kombi')
+		&& (item.paymentDate !== ''));
+	const unPaid = responseData[0].data.filter((item) =>
+		item.sub === 'sub');
 
-	buildCompetitorTable({ data: unPaid, tableId: 'registrationTable' })
-	buildCompetitorTable({ data: combi, tableId: 'combiTable' })
+	//	buildCompetitorTable(unPaid, 'registrationTable');
+	//	buildCompetitorTable(combi, 'combiTable');
+	//	buildCompetitorTable(club, 'clubTable');
+
 	buildCompetitorTable({ data: club, tableId: 'clubTable' })
-	
+	buildCompetitorTable({ data: combi, tableId: 'combiTable' })
+	buildCompetitorTable({ data: unPaid, tableId: 'registrationTable' })
+
 }
 
 function buildCompetitorTable(config) {
 	const tableElm = document.getElementById(config.tableId);
 	const data = config.data;
 
-// function buildCompetitorTable(data, tableId) {
-//	var tableElm = document.getElementById(tableId);
+	// function buildCompetitorTable(data, tableId) {
+	//	var tableElm = document.getElementById(tableId);
 
 	var tableBuffer = [];
 	tableBuffer.push('<table class="table">');
@@ -58,7 +59,7 @@ function buildCompetitorTable(config) {
 	tableBuffer.push('Startovní znak');
 	tableBuffer.push('</th></tr>');
 
-	for(var i = 0, n = data.length; i < n; i++) {
+	for (var i = 0, n = data.length; i < n; i++) {
 		tableBuffer.push('<tr><td>');
 		tableBuffer.push(data[i].name);
 		tableBuffer.push(' ');
