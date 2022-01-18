@@ -18,10 +18,10 @@ async function readCompetitorList() {
 
 	const club = responseData[0].data.filter((item) =>
 		(item.raceclass === 'Klub')
-		&& (item.paymentDate !== ''));
+		&& (item.sub == 'racer'));
 	const combi = responseData[0].data.filter((item) =>
 		(item.raceclass === 'Kombi')
-		&& (item.paymentDate !== ''));
+		&& (item.sub == 'racer'));
 	const unPaid = responseData[0].data.filter((item) =>
 		item.sub === 'sub');
 
