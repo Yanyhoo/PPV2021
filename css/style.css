@@ -112,7 +112,8 @@ body {
 
 #page-header {
 	background: url(../img/bckground_webovky_2022_small.jpg) no-repeat 0 0;
-	background-size: 200% auto;
+	background-size: auto auto;
+	background-position: top 1px center;
 }
 #header {
 	background: #fff;
@@ -151,8 +152,8 @@ body {
 
 @media only screen and (min-width: 992px) {
 	#page-header {
-		background-size: 960px auto;
-		background-position: 50% 100%;
+		background-size: 640px auto;
+		background-position: top 100%;
 	}
 	#menu {
 		background: rgba(30, 40, 50, 0.7);
