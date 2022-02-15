@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>PPV2022 Registrace</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+	<!-- MDB -->
+	<link rel="stylesheet" href="css/mdb.min.css" />
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div id="page-header" class="mb-3">
+		<div id="header" class="container ppv-section"></div>
+		<div id="menu" class="container ppv-section">
+			<div class="row">
+				<div class="col-12 col-lg-6 mt-3 my-lg-3">
+					<h1 class="text-start">Plachtařský Pohár Vysočiny 2022</h1>
+					<h2 class="text-start">
+						Registrační formulář
+					</h2>
+				</div>
+
+				<div class="col-12 col-md-1 col-lg-1 mt-3 my-lg-4">
+					<a href="./index.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark"><span class="fas fa-home"></span></a>
+				</div>
+				<div class="col-12 col-md-3 col-lg-2 mt-3 my-lg-4">
+					<a href="./documents.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark">Dokumenty</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-2 my-3 my-lg-4">
+					<a href="./competitorlist.html" class="btn btn-secondary d-block" data-mdb-ripple-color="dark">Startovní listina</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="page-content" class="mb-3">
+		<div class="container mb-4">
+			<form id="registryForm">
+				
+				<input type="text" name="checkForm" id="checkForm" />
+
+				<div class="row mb-3" id="gliderClass">
+					<div class="col-12">
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="radio"
+								name="flexRadioDefault"
+								id="gliderClassClub"
+							/>
+							<label class="form-check-label" for="gliderClassClub"> Klubová třída </label>
+						</div>
+
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="radio"
+								name="flexRadioDefault"
+								id="gliderClassCombi"
+							/>
+							<label class="form-check-label" for="gliderClassCombi"> Kombinovaná třída </label>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-12 col-md-6 mb-3">
+						<div class="form-outline">
+							<input type="text" id="glider" class="form-control" />
+							<label class="form-label" for="glider">Typ letadla</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-8 col-md-4 mb-3">
+						<div class="form-outline">
+							<input type="text" id="imat" class="form-control" />
+							<label class="form-label" for="imat">Imatrikulace</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-3">
+					<div class="col-6 col-md-3">
+						<div class="form-outline">
+							<input type="text" id="code" class="form-control" />
+							<label class="form-label" for="code">Startovní znak</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-5">
+					<div class="col-12 col-md-8">
+						<div class="form-outline">
+							<input type="text" id="club" class="form-control" />
+							<label class="form-label" for="club">Aeroklub</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-md-3 mb-3">
+						<div class="form-outline">
+							<input type="text" id="fname" class="form-control" />
+							<label class="form-label" for="fname">Jméno</label>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-5 mb-3">
+						<div class="form-outline">
+							<input type="text" id="sName" class="form-control" />
+							<label class="form-label" for="sName">Příjmení</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-md-5 mb-3">
+						<div class="form-outline">
+							<input type="email" id="email" class="form-control" />
+							<label class="form-label" for="email">Email</label>
+						</div>
+					</div>
+
+					<div class="col-8 col-md-3 mb-5">
+						<div class="form-outline">
+							<input type="number" id="phone" class="form-control" />
+							<label class="form-label" for="phone">Telefon</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-4">
+					<div class="col-12 col-md-4">
+						<button type="submit" class="btn btn-primary btn-block mb-3" id="submitBtn">
+							Odeslat	registraci
+						</button>
+					</div>
+
+					<div class="col-12 col-md-2">
+						<a href="./index.html" class="btn btn-secondary btn-block mb-3">
+							Zpět
+						</a>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+	<div id="page-footer">
+		<div id="footer" class="container ppv-section"></div>
+	</div>
+
+	<!-- MDB -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<!-- Custom scripts -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/page.registration.js"></script>
+
+</body>
+
+</html>

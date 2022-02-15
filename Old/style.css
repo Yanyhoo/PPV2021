@@ -1,0 +1,248 @@
+#checkForm {
+	display: none;
+}
+
+
+
+
+/*** TYPO ***/
+
+html {
+	font-size: 12pt;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+}
+h1,
+h3,
+h5,
+.ppv-list-item__title {
+	font-weight: 600;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+h1,
+h3 {
+	text-transform: uppercase;
+}
+.table tbody {
+	font-weight: 400;
+}
+#actualities p {
+	margin-bottom: 0;
+}
+
+
+
+/*** COLORS ***/
+.ppv-section__title {
+	border-bottom: 1px solid #ccc;
+}
+
+.table th {
+	background: #eee;
+}
+#menu {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	background: rgb(30, 40, 50);
+}
+.btn-primary {
+	color: #fff;
+	background: rgb(200, 0, 0);
+	background: linear-gradient(0deg, rgba(160, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 100%);
+}
+.btn-secondary {
+	color: #ddd;
+	background-color: rgba(50, 50, 50, 0.7);
+}
+.btn-primary:hover,
+.btn-secondary:hover {
+	color: #333;
+	background: #eee;
+}
+footer {
+	background: #747473;
+}
+footer,
+footer a {
+	color: #fff;
+}
+
+
+
+/*** LAYOUT ***/
+
+body {
+	min-width: 300px;
+}
+#header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.ppv-section__title {
+	padding-bottom: 5px;
+}
+
+.ppv-list {
+	padding: 0;
+}
+.ppv-list-item {
+	list-style: none;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.ppv-list-item__title {
+	margin-bottom: 0;
+}
+
+
+
+
+/*** HEADER ***/
+
+/* HEADER XS */
+
+#page-header {
+	background: url(../img/ppv-bgr-6.jpg) no-repeat 0 0;
+	background-size: 200% auto;
+}
+#header {
+	background: #fff;
+	margin-bottom: 50vw;
+}
+.ppv-logo {
+	width: 80px;
+}
+
+
+/* HEADER SM */
+
+@media only screen and (min-width: 576px) {
+	#page-header {
+		background-size: 540px auto;
+		background-position: 50% 0;
+	}
+	#header {
+		padding-left: 0;
+		margin-bottom: 20vw;
+	}
+}
+
+
+/* HEADER MD */
+
+@media only screen and (min-width: 768px) {
+
+	#page-header {
+		background-size: 720px auto;
+	}
+ }
+
+
+/* HEADER LG */
+
+@media only screen and (min-width: 992px) {
+	#page-header {
+		background-size: 960px auto;
+		background-position: 50% 100%;
+	}
+	#menu {
+		background: rgba(30, 40, 50, 0.7);
+	}
+	.ppv-logo {
+		width: 130px;
+	}
+	h1 {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+	}
+	h2 {
+		font-size: 1rem;
+		line-height: 1.2rem;
+	}
+	.ppv-date,
+	.ppv-place {
+		display: inline;
+	}
+}
+
+/* HEADER XL */
+
+@media only screen and (min-width: 1200px) {
+	#page-header {
+		background-size: 1140px auto;
+	}
+}
+
+/* HEADER XXL */
+
+@media only screen and (min-width: 1400px) {
+	#page-header {
+		background-size: 1320px auto;
+	}
+}
+
+
+
+/*** WEATHER ***/
+
+#weather table {
+	border-bottom: 1px solid #ccc;
+}
+#weather table th,
+#weather table td {
+	padding: 2px 10px 2px 0;
+}
+#weather table th {
+	font-weight: normal;
+}
+#weather table td {
+	font-weight: 600;
+}
+/*
+#weather {
+	position: relative;
+}
+#weather .ppv-section {
+	position: absolute;
+	top: 80px;
+	right: 10px;
+	color: #ddd;
+	background: rgba(30, 40, 50, 0.7);
+}
+#weather table {
+
+}
+#weather table th,
+#weather table td {
+	padding: 0 5px;
+	max-width: 100px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	vertical-align: top;
+}
+*/
+
+
+/*** TABS ***/
+
+.nav-tabs {
+	border-bottom: 1px solid #eee;
+}
+.nav-tabs .nav-link {
+	background: #eee;
+	margin-right: 2px;
+	border-radius: 2px;
+}
+.nav-tabs .nav-link.active {
+	color: #000;
+	background: #fff;
+	border-color: #fff;
+}
