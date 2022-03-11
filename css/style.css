@@ -111,16 +111,42 @@ body {
 /* HEADER XS */
 
 #page-header {
-	background: url(../img/bckground_webovky_2022_small.jpg) no-repeat 0 0;
-	background-size: auto auto;
-	background-position: top 1px center;
+	/* background: url(../img/bckground_webovky_2022_small.jpg) no-repeat 0 0; */
+	background: url(../img/ppv-bgr-6-sm.jpg) no-repeat;
+	background-size: 100% auto;
+	background-position: bottom center;
+	height: 100vw;
+	position: relative;
+	margin-bottom: 30px;
 }
 #header {
-	background: #fff;
-	margin-bottom: 50vw;
+	height: 80%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 60%);
 }
+#menu {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+}
+
+
 .ppv-logo {
-	width: 80px;
+	width: 50vw;
+	position: relative;
+	top: -7vw;
+	left: -7vw;
+}
+.ppv-header-headline {
+	display: inline-block;
+    position: relative;
+    top: -3vw;
+    font-style: italic;
+    font-size: 5.3vw;
+}
+.ppv-header-date,
+.ppv-header-place {
+	display: block;
 }
 
 
@@ -129,12 +155,29 @@ body {
 @media only screen and (min-width: 576px) {
 	#page-header {
 		background-size: 540px auto;
-		background-position: 50% 0;
+		height: 70vw;
 	}
 	#header {
 		padding-left: 0;
 		margin-bottom: 20vw;
+		position: relative;
 	}
+	.ppv-logo {
+		width: 45vw;
+		top: -5vw;
+		left: -3vw;
+	}
+	.ppv-header-headline {
+		font-size: 1rem;
+		position: absolute;
+		top: 5vw;
+		right: 3vw;
+	}
+	.ppv-header-date,
+	.ppv-header-place {
+		display: inline;
+	}
+
 }
 
 
@@ -143,23 +186,41 @@ body {
 @media only screen and (min-width: 768px) {
 
 	#page-header {
+		background: url(../img/ppv-bgr-6.jpg) no-repeat;
 		background-size: 720px auto;
+		background-position: center top;
+		height: 370px;
 	}
- }
 
+	.ppv-logo {
+		width: 280px;
+    	top: -40px;
+    	left: -20px;
+	}
+
+	#header {
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0) 60%);
+	}
+	.ppv-header-headline {
+		top: 30px;
+		right: 30px;
+	}
+		#organizers {
+		background: #ccc;
+	}
+
+}
 
 /* HEADER LG */
 
 @media only screen and (min-width: 992px) {
 	#page-header {
-		background-size: 640px auto;
+		background-size: 960px auto;
 		background-position: top 100%;
-	}
-	#menu {
-		background: rgba(30, 40, 50, 0.7);
+		height: 470px;
 	}
 	.ppv-logo {
-		width: 130px;
+		width: 320px;
 	}
 	h1 {
 		font-size: 1.2rem;
@@ -181,6 +242,10 @@ body {
 	#page-header {
 		background-size: 1140px auto;
 	}
+	.ppv-logo {
+		width: 320px;
+	}
+
 }
 
 /* HEADER XXL */

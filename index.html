@@ -20,34 +20,45 @@
 
 <body>
 
-	<div id="page-header" class="mb-5">
+	<div id="page-header" class="mb-2 mb-sm-0">
 		<div id="header" class="container ppv-section">
 		</div>
 
+		<!-- MENU -->
 		<div id="menu" class="container ppv-section">
-			<div class="row">
-				<div class="col-12 col-lg-6 mt-3 my-lg-3">
-					<h1 class="text-start">Plachtařský Pohár Vysočiny 2022</h1>
-					<h2 class="text-start">
-						<!--<span class="ppv-date">23. - 31. 7. 2022,</span>-->
-						<span class="ppv-place">Letiště Havlíčkův Brod (LKHB)</span>
-					</h2>
-				</div>
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+				<div class="container-fluid">
 
-				<div class="col-12 col-md-5 col-lg-2 mt-3 my-lg-4">
-					<!-- a href="./registration.html" class="btn btn-primary d-block disabled"
-						data-mdb-ripple-color="dark">Registrace</a -->
-				</div>
-				<div class="col-12 col-md-3 col-lg-2 mt-3 my-lg-4">
-					<a href="./documents.html" class="btn btn-secondary d-block"
-						data-mdb-ripple-color="dark">Dokumenty</a>
-				</div>
-				<div class="col-12 col-md-4 col-lg-2 my-3 my-lg-4">
-					<a href="./competitorlist.html" class="btn btn-secondary d-block"
-						data-mdb-ripple-color="dark">Startovní listina</a>
-				</div>
+					<a class="navbar-text" href="/">
+						PPV 2022 Letiště Havlíčkův Brod
+					</a>
 
-			</div>
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-mdb-toggle="collapse"
+						data-mdb-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<i class="fas fa-bars"></i>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page" href="./documents.html">Dokumenty</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="./competitorlist.html">Startovní listina</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</div>
 
 	</div>
@@ -57,6 +68,31 @@
 
 	<div id="page-content" class="mb-3">
 		<div class="container">
+
+			<div class="row mb-4">
+				<div class="ppv-section" id="organizers">
+					<div class="d-flex flex-column flex-sm-row justify-content-left mt-3 mb-3">
+
+						<div class="col-12 col-sm-4 text-center mb-4 mb-sm-0">
+							<a href="https://www.akletnany.cz/" target="_blank">
+								<img src="/img/logo-AKLT.gif" alt="AK Letňany" clas="img-fluid" height="50">
+							</a>
+						</div>
+						<div class="col-12 col-sm-4 text-center mb-4 mb-sm-0">
+							<a href="https://aeroklubhb.cz/" target="_blank">
+								<img src="/img/logo-AKHB.gif" alt="AK Havlíčkův Brod" clas="img-fluid" height="50">
+							</a>
+						</div>
+						<div class="col-12 col-sm-4 text-center mb-4 mb-sm-0">
+							<a href="https://www.muhb.cz/" target="_blank">
+								<img src="/img/logo-HB.gif" alt="Havlíčkův Brod" clas="img-fluid" height="50">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
 			<div class="row">
 				<div class="col-md-6 col-lg-7 ppv-section">
 					<h3 class="ppv-section__title">Aktuality</h3>
@@ -64,23 +100,8 @@
 					<a href="news.html">Archiv aktualit</a>
 				</div>
 				<div class="col-md-1"></div>
-				<div class="col-md-5 col-lg-4 ppv-section" id="organizers">
-					<div class="col-md-12 text-left">
-						<h3 class="ppv-section__title">Pořadatelské aerokluby</h3>
-					</div>
-					<div class="d-flex flex-row justify-content-center align-items-center mt-3">
-						<div class="col-md-6">
-							<a href="https://www.akletnany.cz/" target="_blank">
-								<img src="/img/AKLT_logo.png" alt="AK Letňany" clas="img-fluid" height="50">
-							</a>
-						</div>
-						<div class="col-md-6">
-							<a href="https://aeroklubhb.cz/" target="_blank">
-								<img src="/img/AK_HB_Logo.png" alt="AK Havlíčkův Brod" clas="img-fluid" height="50">
-							</a>
-						</div>
-					</div>
-					<div class="p-3 col-md-1"></div>
+				<div class="col-md-5 col-lg-4 ppv-section">
+					
 					<div class="Container" id="weather">
 						<!-- Počasí -->
 
