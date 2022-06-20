@@ -1,0 +1,55 @@
+/* externí galerie */
+html   {}
+body   {max-width:100%; min-height:100vh; margin:0; padding:0}
+body.gallery-edit, .align-center {text-align:center}
+body * {box-sizing:border-box}
+
+button, .click {cursor:pointer; user-select:none; transition:all 0.3s}
+.nobr {white-space:nowrap}
+a {color:inherit}
+
+button {display:flex; justify-content:center; align-items:center; margin:auto; background:transparent; border:0; text-decoration:none; outline:none}
+.btn-send {height:48px; width:120px; border:2px solid; font-size:1rem; border-radius:4px}
+.btn-back, .btn-top, .btn-set {width:48px; height:48px; font-size:36px}
+.btn-back {}
+.btn-top {position:fixed; bottom:-100px; right:8px; border-radius:50%; background:lightgrey}
+.btn-set {position:fixed; bottom:8px; left:8px}
+
+.container {padding:0 !important}
+.gallery-container {font-size:0.9rem; padding:6px; background:whiteSmoke; min-height:60vh; overflow:hidden}
+.gallery-edit>div {display:inline-block}
+
+
+.gallery-name {font-weight:bold; font-size:1rem}
+
+.gallery-grid, .images-grid       {display:grid; padding:0; margin:0; list-style:none; text-align:left}
+.gallery-grid li, .images-grid li {background:white; color:black; overflow:hidden}
+
+.gallery-grid         {grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); grid-auto-rows:1fr; grid-gap:12px}
+.gallery-grid::before {content:''; width:0; padding-bottom:50%; grid-row:1/1; grid-column:1/1}
+.gallery-grid>*:first-child, .images-grid>*:first-child {grid-row:1/1; grid-column:1/1}
+.images-grid          {grid-template-columns:repeat(auto-fill, minmax(160px, 1fr)); grid-auto-rows:1fr; grid-gap:2px}
+.images-grid::before  {content:''; width:0; padding-bottom:100%; grid-row:1/1; grid-column:1/1}
+
+.gallery-grid img   {display:inline-block; width:50%; height:100%; vertical-align:middle}
+.gallery-item-label {display:inline-block; width:50%; height:100%; padding:5px; margin:auto; vertical-align:top}
+.gallery-item-label::first-line {font-weight:bold; font-size:0.9rem; text-transform:uppercase}
+
+.images-grid li  {border:4px solid #333}
+.images-grid a   {display:block}
+.images-grid img {display:block; width:100%; max-height:100%}
+
+.gallery-grid li {position:relative}
+.gallery-grid li::after {content:""; position:absolute; left:50%; bottom:0; right:0; border-bottom:4px solid transparent; transition:all 0.3s}
+
+article li.click:hover, article li.click:hover::after {border-color:white}
+
+/* přihlašovací obrazovka do galerie */
+.login_window {display:inline-block; margin:10% auto; text-align:center}
+.login_window input {width:180px; padding:5px; font-size:1.2rem; border:1px solid #ccc}
+.login_window p {margin:10px}
+
+.imputs {display:table; margin-top:40px; margin-bottom:20px; text-align:left; border-collapse: collapse;}
+.imputs .row {display:table-row}
+.imputs .row>div {display:table-cell; border:1px solid lightgray}
+.imputs input {color:inherit; background:inherit; border:0; margin:0; padding:4px; font-size:inherit}
