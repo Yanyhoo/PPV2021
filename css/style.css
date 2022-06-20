@@ -41,6 +41,7 @@ h3 {
 
 
 /*** COLORS ***/
+
 .ppv-section__title {
 	border-bottom: 1px solid #ccc;
 }
@@ -168,7 +169,7 @@ body {
 		left: -3vw;
 	}
 	.ppv-header-headline {
-		font-size: 1rem;
+		font-size: 1.5em;
 		position: absolute;
 		top: 5vw;
 		right: 3vw;
@@ -204,9 +205,13 @@ body {
 	.ppv-header-headline {
 		top: 30px;
 		right: 30px;
+		font-style: normal;
 	}
-		#organizers {
+	#organizers {
 		background: #ccc;
+	}
+	.nav-item {
+		margin-left: 20px;
 	}
 
 }
@@ -273,28 +278,7 @@ body {
 #weather table td {
 	font-weight: 600;
 }
-/*
-#weather {
-	position: relative;
-}
-#weather .ppv-section {
-	position: absolute;
-	top: 80px;
-	right: 10px;
-	color: #ddd;
-	background: rgba(30, 40, 50, 0.7);
-}
-#weather table {
 
-}
-#weather table th,
-#weather table td {
-	padding: 0 5px;
-	max-width: 100px;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	vertical-align: top;
-}
-*/
 
 
 /*** TABS ***/
