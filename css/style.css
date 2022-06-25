@@ -77,6 +77,13 @@ footer a {
 	color: #fff;
 }
 
+/* MENU COLORS */
+.page-documents .nav-item-documents .nav-link,
+.page-competitors .nav-item-competitors .nav-link,
+.page-gallery .nav-item-gallery .nav-link {
+	color: #fff;
+}
+
 
 
 /*** LAYOUT ***/
@@ -295,4 +302,130 @@ body {
 	color: #000;
 	background: #fff;
 	border-color: #fff;
+}
+
+
+/*** GALLERY ***/
+
+.btn-back {
+	cursor: pointer;
+}
+.btn-back,
+.gallery-name {
+	font-weight: bold;
+	font-size: 1rem;
+}
+.gallery-name {
+	margin-bottom: 12px;
+}
+
+.gallery-container {
+	font-size: 0.9rem; 
+	padding: 24px;
+	background: whiteSmoke;
+	min-height: 50vh;
+	overflow: hidden;
+}
+.gallery-edit>div {
+	display: inline-block;
+}
+.gallery-grid,
+.images-grid {
+	display: grid;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align:left;
+}
+.gallery-grid li,
+.images-grid li {
+	background: white;
+	color: black;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	cursor: pointer;
+}
+.gallery-grid {
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	grid-auto-rows: 1fr;
+	grid-gap: 24px;
+}
+.images-grid::before {
+	content: '';
+	width: 0;
+	padding-bottom: 100%;
+	grid-row: 1/1;
+	grid-column: 1/1;
+}
+.gallery-grid img {
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	vertical-align: middle;
+}
+.gallery-grid>*:first-child,
+.images-grid>*:first-child {
+	grid-row: 1/1;
+	grid-column: 1/1;
+}
+.images-grid {
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	grid-auto-rows: 1fr;
+	grid-gap: 2px;
+	grid-gap: 24px;
+}
+.images-grid a {
+	display:block;
+}
+.images-grid img {
+	display: block;
+	width: 100%;
+	max-height: 100%;
+}
+.gallery-grid li {
+	position: relative;
+}
+.gallery-grid li::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	right: 0;
+	border-bottom: 4px solid transparent;
+	transition: all 0.3s;
+}
+.gallery-item-label {
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	padding: 8px 12px;
+	margin: auto;
+	vertical-align: top;
+}
+.gallery-item-label::first-line {
+	font-weight: bold;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+}
+.gallery-bar {
+	background: #ccc;
+	position: relative;
+	padding-top: 5px;
+	padding-bottom: 5px; 
+}
+.gallery-bar a {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.gallery-bar .btn-set,
+.gallery-bar .btn-top {
+	border: none;
+	background: transparent;
+	padding: 5px 0;
+}
+.gallery-bar .btn-top {
+	position: absolute;
+	right: 25px;
+	top: 5px;
 }
