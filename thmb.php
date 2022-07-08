@@ -49,6 +49,4 @@ function resize($filename, $width) {
 
 //resize($_GET['filename'], $_GET['width']); 
 
-image_crop($_GET['filename'], $_GET['width'], $_GET['width']); 
-    
-?>    
+image_crop($_GET['filename'], $_GET['width'], $_GET['width']);

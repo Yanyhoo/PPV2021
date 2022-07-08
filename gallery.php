@@ -20,7 +20,7 @@
 </head>
 
 <body class="page-gallery">
-	<div id="page-header" class="mb-2 mb-sm-0">
+	<div id="page-header">
 		<div id="header" class="container ppv-section"></div>
 			<!-- MENU -->
 			<div id="menu" class="container ppv-section">
@@ -37,6 +37,7 @@
 				</nav>
 				</div>
 		</div>
+		<h1 class="container ppv-page-title">Galerie</h1>
 
 		<?php if (isset($_POST['dir'])) { $post_dir = $_POST['dir']; } else { $post_dir = ''; } ?>
 		
