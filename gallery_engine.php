@@ -1,9 +1,9 @@
 <?php
 $gallery_dir = 'album';
-// $root = '/home/www/ppvcup.cz/www/ppvcup.cz/gallery/'.$gallery_dir;
-// $app_root = '/home/www/ppvcup.cz/www/ppvcup.cz/gallery'; 
-$root = '/home/www/ppvcup.cz/www/2022.ppvcup.cz/'.$gallery_dir;
-$app_root = '/home/www/ppvcup.cz/www/2022.ppvcup.cz'; 
+$root = '/home/www/ppvcup.cz/www/ppvcup.cz/'.$gallery_dir;
+$app_root = '/home/www/ppvcup.cz/www/ppvcup.cz'; 
+// $root = '/home/www/ppvcup.cz/www/2022.ppvcup.cz/'.$gallery_dir;
+// $app_root = '/home/www/ppvcup.cz/www/2022.ppvcup.cz'; 
 
 
 $post_dir = $_POST['dir'] ?? false;
@@ -36,15 +36,24 @@ function gallery_name($database, $folder) {
     }
 // jméno galerie s popisem
 function gallery_label($database, $folder) {
-    if ($database == false) { return $folder; }
-    if ($database[$folder]['LABEL']) { 
-        if ($database[$folder]['DESCRIPTION']) { 
-            return $database[$folder]['LABEL'].'<br>'.$database[$folder]['DESCRIPTION'];
+
+    try {
+    
+        if ($database == false) { return $folder; }
+
+        if ($database[$folder]['LABEL']) {
+            if ($database[$folder]['DESCRIPTION']) { 
+                return $database[$folder]['LABEL'].'<br>'.$database[$folder]['DESCRIPTION'];
             } else {
-            return $database[$folder]['LABEL'];
+                return $database[$folder]['LABEL'];
             }
         } else { return $folder; }
+    } catch (Exception $e) {
+        return ''; // set gallery label to "empty" if anything goes wrong
     }
+
+}
+
 // heslo do chráněné galerie
 function gallery_psw($database, $folder, $psw) {
     if ($database == false) { return true; }
