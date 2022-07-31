@@ -60,7 +60,7 @@
 		var tableBuffer = [];
 		tableBuffer.push('<ul class="ppv-list">');
 
-		for (var i = 0; i < 3; i++) {
+		for (var i = 0; i < 7; i++) {
 			if (data[i]) {
 				tableBuffer.push('<li class="ppv-list-item"><h5 class="ppv-list-item__title"><span class="ppv-list-item__time">');
 				tableBuffer.push(data[i].Date);
