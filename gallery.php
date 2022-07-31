@@ -41,7 +41,7 @@
 
 		<?php if (isset($_POST['dir'])) { $post_dir = $_POST['dir']; } else { $post_dir = ''; } ?>
 		
-		<div class="container gallery-container" data-dir="<?php echo $dir_name ?>">
+		<div class="container gallery-container" data-dir="<?php echo $post_dir ?>">
 			<div class="frame-main"></div>
 			<div class="frame-sub"></div>
 
