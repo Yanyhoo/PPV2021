@@ -4,6 +4,8 @@
 	$to = 'igc@ppvcup.cz'; 
 
 
+	$igcErrorOutput = '';
+
 	// send mail
  	if ( !empty($_POST["imatriculation"]) && !empty($_FILES["igcfile"]["name"]) ) {
 
@@ -13,14 +15,17 @@
 
 		// Check if file already exists
 		if (file_exists($target_file)) {
-			echo "Sorry, file already exists.";
+			// localization
+			// $igcErrorOutput .= "Sorry, file already exists.";
 			$uploadOk = 0;
 		}
 
 		// TODO: limit to IGC file size
 		// Check file size
-		if ($_FILES["fileToUpload"]["size"] > 1000000) {
-			echo "Sorry, your file is too large.";
+		if ( !empty($_FILES["fileToUpload"]) && !empty($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["size"] > 1) {
+			// localization
+			$igcErrorOutput .= "Váš soubor je příliš velký, prosím zkontrolujte, zda se jedná o platný IGC soubor. V případě že je platný, zašlete ho na adresu " . $to . " ze svého e-mailu.<br />";
+			// Sorry, your file is too large.
 			$uploadOk = 0;
 		}
 
@@ -38,13 +43,18 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 
 		// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 0) {
-  			echo "Sorry, your file was not uploaded.";
+			// localization
+			// $igcErrorOutput .= "IGC soubor nebyl odeslán.<br />";
+			// Sorry, your file was not uploaded.
 		// if everything is ok, try to upload file
 		} else {
   			if (move_uploaded_file($_FILES["igcfile"]["tmp_name"], $target_file)) {
-				echo "The file ". htmlspecialchars( basename( $_FILES["igcfile"]["name"])). " has been uploaded.";
+				// localization
+				// $igcErrorOutput = "The file ". htmlspecialchars( basename( $_FILES["igcfile"]["name"])). " has been uploaded.";
   			} else {
-    			echo "Sorry, there was an error uploading your file.";
+				// localization
+    			$igcErrorOutput .= "Z technických důvodů se nepodařilo odeslat IGC soubor. Prosím zašlete ho na adresu " . $to . " ze svého e-mailu.<br />";
+				// Sorry, there was an error uploading your file."
 			}
 		}
 
@@ -99,7 +109,9 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 		$mail = @mail($to, $subject, $message, $headers, $returnpath);  
 		 
 		// Email sending status 
-		echo $mail?"<h1>Email Sent Successfully!</h1>":"<h1>Email sending failed.</h1>"; 
+		// localization
+		// $igcErrorOutput = $mail?"<h1>Email Sent Successfully!</h1>":"<h1>Email sending failed.</h1>"; 
+		$igcErrorOutput .= $mail ? "" : "IGC soubor se nepodařilo odeslat. Prosím zašlete ho na adresu " . $to . " ze svého e-mailu.<br />";
 	}
 
 ?>
@@ -168,56 +180,57 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 		<h1 class="container ppv-page-title mb-3">Odeslání IGC</h1>
 
 		<div class="container">
+			<?php if ( $igcErrorOutput != "" ): ?>
+				<div><?php echo($igcErrorOutput); ?></div>
+			<?php else: ?>
+			
+				<?php if ( !empty($_POST["imatriculation"]) && !empty($_FILES["igcfile"]["name"]) ): ?>
+					<div>IGC soubor byl odeslán pořadateli soutěže</div>
+				<?php else:	?>
+					<form action="igc.php" method="post" enctype="multipart/form-data">
 
-			<?php if ( !empty($_POST["imatriculation"]) && !empty($_FILES["igcfile"]["name"]) ): ?>
-				<div>IGC soubor byl odeslán pořadateli soutěže</div>
-			<?php else:	?>
-				<form action="igc.php" method="post" enctype="multipart/form-data">
+						<input type="hidden" name="sent" value="true" />
 
-					<input type="hidden" name="sent" value="true" />
-
-					<div class="row mt-2 mb-4">
-						
-						<div class="col-3 ppv-section">
-							<label for="imatriculation">Imatrikulace kluzáku</label>
-							<div>
-								<input type="text" class="form-control" name="imatriculation" id="imatriculation" />
-							</div>
-							<?php if ( !empty($_POST["sent"]) && empty($_POST["imatriculation"]) ): ?>
-								<div class="ppv-warning">Napište prosím imatrikulaci kluzáku.</div>
-							<?php endif; ?>
-						</div>
-
-						<div class="col-3 ppv-section">
-							<label for="igcfile">Igc soubor</label>
-							<div>
-								<input type="file" class="form-control" name="igcfile" id="igcfile" />
+						<div class="row mt-2 mb-4">
+							
+							<div class="col-3 ppv-section">
+								<label for="imatriculation">Imatrikulace kluzáku</label>
+								<div>
+									<input type="text" class="form-control" name="imatriculation" id="imatriculation" />
+								</div>
+								<?php if ( !empty($_POST["sent"]) && empty($_POST["imatriculation"]) ): ?>
+									<div class="ppv-warning">Napište prosím imatrikulaci kluzáku.</div>
+								<?php endif; ?>
 							</div>
 
-							<?php if ( !empty($_POST["sent"]) && empty($_FILES["igcfile"]["name"]) ): ?>
-								<div class="ppv-warning">Přiložte prosím IGC soubor.</div>
-							<?php endif; ?>
-						</div>
+							<div class="col-3 ppv-section">
+								<label for="igcfile">Igc soubor</label>
+								<div>
+									<input type="file" class="form-control" name="igcfile" id="igcfile" />
+								</div>
 
-						<div class="col-3 ppv-section">
-							&nbsp;
-							<div>
-								<input type="submit" class="btn btn-primary" value="Poslat" name="submit" />
+								<?php if ( !empty($_POST["sent"]) && empty($_FILES["igcfile"]["name"]) ): ?>
+									<div class="ppv-warning">Přiložte prosím IGC soubor.</div>
+								<?php endif; ?>
+							</div>
+
+							<div class="col-3 ppv-section">
+								&nbsp;
+								<div>
+									<input type="submit" class="btn btn-primary" value="Poslat" name="submit" />
+								</div>
 							</div>
 						</div>
-					</div>
 
 
 
-					<div>V případě jakýchkoli problémů prosím zašlete IGC soubor na adresu <?php echo($to); ?> ze svého e-mailu.</div>
+						<div>V případě jakýchkoli problémů prosím zašlete IGC soubor na adresu <?php echo($to); ?> ze svého e-mailu.</div>
 
-				</form>
+					</form>
 
-	
-				
+				<?php endif; ?>
+
 			<?php endif; ?>
-
-
 		</div>
 	</div>
 
